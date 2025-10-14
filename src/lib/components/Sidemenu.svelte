@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import { TOOLS_INSTRUCTIONS, HOMEPAGE_INSTRUCTIONS, SETTING_INSTRUCTIONS } from '$lib/types';
+</script>
 
 <sideMenu>
 	<div class="flex h-screen w-60 flex-col bg-slate-300 p-3">
@@ -58,7 +60,6 @@
 			<div>
 				<div class="w-3"></div>
 				<h2>Main menu</h2>
-				
 			</div>
 			<div>
 				<h2>Tools</h2>
@@ -74,7 +75,7 @@
 	@import 'tailwindcss';
 
 	.mainMenuContainer > div {
-		@apply text-left flex;
+		@apply flex text-left;
 	}
 
 	h2 {

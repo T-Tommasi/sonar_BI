@@ -1,19 +1,46 @@
-const TOOLS_INSTRUCTIONS = [{
-    name: "scadenzario clienti", link: "/scadenzario_clienti", showThis: true,
-},{
-    name: "scadenzario fornitori", link:"/scadenzario_fornitori", showThis: true,
-},{
-    name: "Analisi marginalità || prodotti", link: "/analisi_margini_prodotti", showThis: true,
-},{
-    name: "Analisi marginalità || clienti", link: "/analisi_margini_clienti", showThis:true,
-}]
+interface TOOLS_INSTRUCTIONS {
+	name: string;
+	link: string;
+	showThis: boolean;
+}
 
-const HOMEPAGE_INSTRUCTIONS = [{
+interface HOMEPAGE_INSTRUCTIONS {
+	name: string;
+	link: string;
+	showThis: boolean;
+}
 
-}]
+interface SETTING_INSTRUCTIONS {
+	name: string;
+	link: string;
+	showThis: boolean;
+}
 
-const SETTING_INSTRUCTIONS = [{
+const TOOLS_INSTRUCTIONS = [
+	{
+		name: 'scadenzario clienti',
+		link: '/scadenzario_clienti',
+		showThis: true
+	},
+	{
+		name: 'scadenzario fornitori',
+		link: '/scadenzario_fornitori',
+		showThis: true
+	},
+	{
+		name: 'Analisi marginalità || prodotti',
+		link: '/analisi_margini_prodotti',
+		showThis: true
+	},
+	{
+		name: 'Analisi marginalità || clienti',
+		link: '/analisi_margini_clienti',
+		showThis: true
+	}
+];
 
-}]
+const HOMEPAGE_INSTRUCTIONS = [{}];
 
-export {TOOLS_INSTRUCTIONS, HOMEPAGE_INSTRUCTIONS, SETTING_INSTRUCTIONS}
+const SETTING_INSTRUCTIONS = [{}];
+
+export { TOOLS_INSTRUCTIONS, HOMEPAGE_INSTRUCTIONS, SETTING_INSTRUCTIONS };
