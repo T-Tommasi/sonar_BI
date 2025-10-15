@@ -79,6 +79,6 @@
 	}
 
 	h2 {
-		@apply text-xl text-slate-600;
+		@apply text-xl text-slate-500;
 	}
 </style>
