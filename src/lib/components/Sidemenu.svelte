@@ -1,9 +1,15 @@
 <script lang="ts">
-	import { TOOLS_INSTRUCTIONS, HOMEPAGE_INSTRUCTIONS, SETTING_INSTRUCTIONS } from '$lib/types';
+	import { TOOLS_INSTRUCTIONS, HOMEPAGE_INSTRUCTIONS, SETTING_INSTRUCTIONS } from '$lib/menuElements';
+
+	let menuElements = {
+		tools: TOOLS_INSTRUCTIONS,
+		home: HOMEPAGE_INSTRUCTIONS,
+		settings: SETTING_INSTRUCTIONS
+	};
 </script>
 
 <sideMenu>
-	<div class="flex h-screen w-60 flex-col bg-slate-300 p-3">
+	<nav class="flex h-screen w-60 flex-col bg-slate-300 p-3">
 		<div class="">
 			<svg
 				width="207"
@@ -57,18 +63,35 @@
 			</svg>
 		</div>
 		<div class="mainMenuContainer flex h-150 flex-col justify-around">
-			<div>
-				<div class="w-3"></div>
+			<div class="flex flex-col">
 				<h2>Main menu</h2>
+				<ul>
+					{#each menuElements.home as home }
+						{#if home.showThis === true}
+						<li class="hover:bg-slate-600 hover:text-slate-100 rounded-md">
+							<a href={home.link} class="block w-full p-2" >{home.name}</a>
+						</li>
+						{/if}
+					{/each}
+				</ul>
 			</div>
-			<div>
+			<div class="flex flex-col">
 				<h2>Tools</h2>
+				<ul>
+					{#each menuElements.tools as tool }
+						{#if tool.showThis === true}
+						<li class="hover:bg-slate-600 hover:text-slate-100 rounded-md transition duration-500 ease-in-out hover:scale-105">
+							<a href={tool.link} class="block w-full p-2" >{tool.name}</a>
+						</li>
+						{/if}
+					{/each}
+				</ul>
 			</div>
 			<div>
 				<h2>Settings</h2>
 			</div>
 		</div>
-	</div>
+	</nav>
 </sideMenu>
 
 <style>
