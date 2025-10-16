@@ -1,11 +1,11 @@
-interface TOOLS_INSTRUCTION {
+interface INSTRUCTION {
     name: string;
     link: string;
     icon: string|"none"|ImageBitmap;
     showThis: boolean;
 }
 
-const TOOLS_INSTRUCTIONS:TOOLS_INSTRUCTION[] = [{
+const TOOLS_INSTRUCTIONS: INSTRUCTION[] = [{
     name: "scadenzario clienti", link: "/scadenzario_clienti", icon: "none",  showThis: true,
 },{
     name: "scadenzario fornitori", link:"/scadenzario_fornitori", icon: "none", showThis: true,
@@ -19,13 +19,13 @@ const TOOLS_INSTRUCTIONS:TOOLS_INSTRUCTION[] = [{
     name: "Genera listino prezzi", link: "/generatore_listino_prezzi", icon: "none", showThis: true,
 }]
 
-const HOMEPAGE_INSTRUCTIONS:TOOLS_INSTRUCTION[] = [{
+const HOMEPAGE_INSTRUCTIONS: INSTRUCTION[] = [{
     name: "Dashboard", link: "/dashboard", icon: "none", showThis: true,
 },{
     name: "Homepage", link: "/homepage", icon: "none", showThis: false,
 },]
 
-const SETTING_INSTRUCTIONS:TOOLS_INSTRUCTION[] = [{
+const SETTING_INSTRUCTIONS: INSTRUCTION[] = [{
     name: "Impostazioni", link: "/impostazioni", icon: "none", showThis: true,
 },{
     name: "Gestione utenti", link: "/gestione_utenti", icon: "none", showThis: true,

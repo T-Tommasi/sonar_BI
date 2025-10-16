@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { TOOLS_INSTRUCTIONS, HOMEPAGE_INSTRUCTIONS, SETTING_INSTRUCTIONS } from '$lib/menuElements';
+	import {TOOLS_INSTRUCTIONS,HOMEPAGE_INSTRUCTIONS,SETTING_INSTRUCTIONS} from '$lib/menuElements';
+	import LinkButton from '$lib/components/menuButton.svelte';
 
 	let menuElements = {
 		tools: TOOLS_INSTRUCTIONS,
@@ -9,7 +10,7 @@
 </script>
 
 <sideMenu>
-	<nav class="flex h-screen w-60 flex-col bg-slate-300 p-3">
+	<nav class="flex h-screen w-60 flex-col bg-slate-300 p-3 border-r-1">
 		<div class="">
 			<svg
 				width="207"
@@ -68,9 +69,7 @@
 				<ul>
 					{#each menuElements.home as home }
 						{#if home.showThis === true}
-						<li class="hover:bg-slate-600 hover:text-slate-100 rounded-md">
-							<a href={home.link} class="block w-full p-2" >{home.name}</a>
-						</li>
+						<LinkButton hreft={home.link} text={home.name} ></LinkButton>
 						{/if}
 					{/each}
 				</ul>
