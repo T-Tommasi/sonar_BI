@@ -5,7 +5,7 @@
 		SETTING_INSTRUCTIONS
 	} from '$lib/menuElements';
 	import LinkButton from '$lib/components/menuButton.svelte';
-
+	import SeparatorLine from './separatorLine.svelte';
 	let menuElements = {
 		tools: TOOLS_INSTRUCTIONS,
 		home: HOMEPAGE_INSTRUCTIONS,
@@ -13,7 +13,7 @@
 	};
 </script>
 
-<nav class="flex h-screen w-60 flex-col border-r-1 bg-slate-300 p-3">
+<nav class="flex h-screen w-60 flex-col bg-slate-200 p-3 gap-5">
 	<div class="">
 		<svg
 			width="207"
@@ -66,7 +66,7 @@
 			></path>
 		</svg>
 	</div>
-	<div class="mainMenuContainer flex h-150 flex-col justify-around">
+	<div class="mainMenuContainer flex h-150 flex-col gap-5">
 		<div class="flex flex-col">
 			<h2>Main menu</h2>
 			<ul>
@@ -77,6 +77,7 @@
 				{/each}
 			</ul>
 		</div>
+		<SeparatorLine />
 		<div class="flex flex-col">
 			<h2>Tools</h2>
 			<ul>
@@ -87,6 +88,7 @@
 				{/each}
 			</ul>
 		</div>
+		<SeparatorLine />
 		<div class="flex flex-col">
 			<h2>Settings</h2>
 			<ul>
