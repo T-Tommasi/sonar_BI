@@ -41,6 +41,12 @@ const TOOLS_INSTRUCTIONS: INSTRUCTION[] = [
 		link: '/generatore_listino_prezzi',
 		icon: 'material-symbols:euro-symbol-rounded',
 		showThis: true
+	},
+	{
+		name: 'Importa nuovo CSV',
+		link: '/parser/+page.svelte',
+		icon: 'material-symbols:file-upload-rounded',
+		showThis: true
 	}
 ];
 
